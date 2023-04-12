@@ -69,7 +69,7 @@ public class LocalObjectStorage extends DefaultObjectStorage {
         entity.setFileType(fileContentType);
         entity.setFilePath(String.format("/%s/%s/%s", moduleName, dateDir.replace("\\\\", "/"), fileName));
         entity.setFileSize(fileSize);
-        objectStorageDAO.insertFile(entity);
+        objectStorageDAO.saveFileInfo(entity);
         if (StrUtil.isNotBlank(entity.getId())) {
             return ObjectStorageVO.transform(entity);
         } else {
