@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.ak47007.minio.autoconfig.ObjectStorageMinioAutoConfiguration
