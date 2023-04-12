@@ -8,7 +8,10 @@ mvn clean install
 ```xml
 <dependency>
     <groupId>com.ak47007</groupId>
-    <artifactId>spring-boot-starter-os-core</artifactId>
+    <artifactId>spring-boot-starter-os-minio</artifactId>
     <version>${version}</version>
 </dependency>
 ```
+# 注意事项
+
+> Minio默认服务端口为9090,endpoint属性的值应该为服务端口的域名

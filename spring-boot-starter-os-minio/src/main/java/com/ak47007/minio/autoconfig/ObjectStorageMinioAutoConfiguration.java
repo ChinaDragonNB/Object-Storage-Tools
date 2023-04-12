@@ -47,9 +47,9 @@ public class ObjectStorageMinioAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean //  @ConditionalOnMissingBean 避免重复注册该Bean
-    public ObjectStorage objectStorage(MinioClient minioClient) {
+    public ObjectStorage objectStorage() throws KeyManagementException {
         objectStorageMinioProperties.checkConfig();
-        return new MinioObjectStorage(objectStorageDAO, objectStorageMinioProperties, minioClient);
+        return new MinioObjectStorage(objectStorageDAO, objectStorageMinioProperties, minioClient());
     }
 
     @Bean

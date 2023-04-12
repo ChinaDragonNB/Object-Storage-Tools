@@ -27,12 +27,12 @@ public class ObjectStorageMinioProperties {
     private String endpoint;
 
     /**
-     * Key
+     * Key,新版本为username
      */
     private String accessKey;
 
     /**
-     * 密钥
+     * 密钥,新版本为password
      */
     private String secretKey;
 
