@@ -66,7 +66,7 @@ public class ObjectStorageDaoImpl implements ObjectStorageDAO {
 
     @Override
     @Transactional
-    public int insertFile(ObjectStorageEntity objectStorage) {
+    public int saveFileInfo(ObjectStorageEntity objectStorage) {
         SysObjectStorage sysObjectStorage = new SysObjectStorage();
         BeanUtils.copyProperties(objectStorage, sysObjectStorage);
         int i = sysStorageObjectMapper.insert(sysObjectStorage);

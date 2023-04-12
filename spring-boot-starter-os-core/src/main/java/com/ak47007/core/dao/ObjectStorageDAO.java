@@ -42,9 +42,9 @@ public interface ObjectStorageDAO {
     ObjectStorageEntity selectById(String fileId);
 
     /**
-     * 插入文件数据
+     * 保存文件信息
      *
-     * @param objectStorage 文件信息
+     * @param entity 文件信息,保存成功后需要将文件ID赋值给该对象
      */
-    int insertFile(ObjectStorageEntity objectStorage);
+    int saveFileInfo(ObjectStorageEntity entity);
 }
