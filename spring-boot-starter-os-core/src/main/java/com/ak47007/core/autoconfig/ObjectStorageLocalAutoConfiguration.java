@@ -3,7 +3,7 @@ package com.ak47007.core.autoconfig;
 import com.ak47007.core.EnableObjectStorage;
 import com.ak47007.core.ObjectStorage;
 import com.ak47007.core.dao.ObjectStorageDAO;
-import com.ak47007.core.local.LocalObjectStorage;
+import com.ak47007.core.support.LocalObjectStorage;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -29,7 +29,7 @@ public class ObjectStorageLocalAutoConfiguration {
     private final ObjectStorageLocalProperties objectStorageLocalProperties;
 
     @Bean
-    @ConditionalOnMissingBean
+    @ConditionalOnMissingBean //  @ConditionalOnMissingBean 避免重复注册该Bean
     public ObjectStorage objectStorage() {
         objectStorageLocalProperties.checkConfig();
         return new LocalObjectStorage(objectStorageDAO, objectStorageLocalProperties);

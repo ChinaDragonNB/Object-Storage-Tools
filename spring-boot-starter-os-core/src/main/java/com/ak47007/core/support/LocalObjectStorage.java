@@ -1,4 +1,4 @@
-package com.ak47007.core.local;
+package com.ak47007.core.support;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;

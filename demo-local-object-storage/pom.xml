@@ -18,6 +18,7 @@
         <spring-boot-mybatis-plus.version>3.5.1</spring-boot-mybatis-plus.version>
         <mysql.version>8.0.24</mysql.version>
         <spring-boot-druid.version>1.1.21</spring-boot-druid.version>
+        <os-core.verion>1.0.0</os-core.verion>
     </properties>
     <dependencies>
         <dependency>
@@ -27,7 +28,7 @@
         <dependency>
             <groupId>com.ak47007</groupId>
             <artifactId>spring-boot-starter-os-core</artifactId>
-            <version>1.0.0</version>
+            <version>${os-core.verion}</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
